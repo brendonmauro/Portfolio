@@ -1,24 +1,96 @@
 ﻿@page "/projetos"
 
-<h1 class="text-2xl font-bold mb-4">Projetos</h1>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="p-4 shadow-lg rounded-lg border">
-        <h2 class="font-bold">DynamicDbContext</h2>
-        <p>Contexto dinâmico para múltiplos bancos de dados, inicialmente PostgreSQL.</p>
-        <span class="text-sm text-gray-600">.NET, EF Core, PostgreSQL</span>
-    </div>
-    <div class="p-4 shadow-lg rounded-lg border">
-        <h2 class="font-bold">API com JWT Refresh</h2>
-        <p>API segura em .NET com autenticação JWT e renovação automática de tokens.</p>
-        <span class="text-sm text-gray-600">.NET, JWT, Blazor</span>
-    </div>
-    <div class="p-4 shadow-lg rounded-lg border">
-        <h2 class="font-bold">Worker Service com Selenium</h2>
-        <p>Automação de processos com Selenium e C# executando em background service.</p>
-        <span class="text-sm text-gray-600">.NET, Selenium, RPA</span>
+<div id="projetos" class="min-h-screen bg-gray-950 text-white py-16 px-6">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Título -->
+        <h2 class="text-4xl font-bold text-center text-blue-400 mb-12">
+            Projetos
+        </h2>
+
+        <!-- Grid de projetos -->
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Projeto 1 -->
+            <div class="bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+                <!-- Imagem ilustrativa -->
+                <img src="images/projetos/rpa.jpg" alt="Projeto RPA"
+                     class="h-40 w-full object-cover">
+
+                <!-- Conteúdo -->
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Automações RPA</h3>
+                    <p class="text-gray-300 text-sm flex-1">
+                        Robôs desenvolvidos em C# e Selenium para automatizar processos internos,
+                        logins em sistemas e coleta de dados críticos.
+                        <br />
+                        Impacto: redução de horas manuais, maior confiabilidade e escalabilidade.
+                    </p>
+
+                    <!-- Tecnologias -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">C#</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">.NET Core</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">Selenium</span>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="mt-4 flex gap-4 text-sm">
+                        <a href="#" class="text-blue-400 hover:underline">🔗 GitHub</a>
+                        <a href="#" class="text-blue-400 hover:underline">📄 Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+                <img src="images/projetos/api.jpg" alt="APIs REST"
+                     class="h-40 w-full object-cover">
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">APIs REST .NET Core</h3>
+                    <p class="text-gray-300 text-sm flex-1">
+                        Desenvolvimento de serviços RESTful para integração de aplicações internas,
+                        com autenticação JWT e documentação em Swagger.
+                        <br />
+                        Valor: integração rápida entre sistemas, redução de falhas em comunicação.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">.NET Core</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">C#</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">Swagger</span>
+                    </div>
+                    <div class="mt-4 flex gap-4 text-sm">
+                        <a href="#" class="text-blue-400 hover:underline">🔗 GitHub</a>
+                        <a href="#" class="text-blue-400 hover:underline">🚀 Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col">
+                <img src="images/projetos/db.jpg" alt="Banco de Dados"
+                     class="h-40 w-full object-cover">
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Integração com Bancos de Dados</h3>
+                    <p class="text-gray-300 text-sm flex-1">
+                        Projetos que envolveram PostgreSQL e SQL Server,
+                        com foco em relatórios, consultas otimizadas e persistência
+                        para automações.
+                        <br />
+                        Benefício: confiabilidade, performance e suporte a decisões estratégicas.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">SQL Server</span>
+                        <span class="bg-blue-600 text-xs px-2 py-1 rounded">Entity Framework</span>
+                    </div>
+                    <div class="mt-4 flex gap-4 text-sm">
+                        <a href="#" class="text-blue-400 hover:underline">📊 Relatório</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- (Você pode duplicar esse bloco para mais projetos: Monitoramento, Front-end, Acadêmicos, etc.) -->
+        </div>
     </div>
 </div>
-
-@code {
-
-}

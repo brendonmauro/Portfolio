@@ -1,8 +1,118 @@
 ﻿@page "/sobre"
 
-<h1 class="text-2xl font-bold mb-4">Sobre mim</h1>
-<p>Bacharel em Sistemas de Informação com mais de 5 anos de experiência em desenvolvimento de software. Tenho atuado em projetos de automação, APIs, RPA e soluções completas em .NET.</p>
+<div id="sobre" class="min-h-screen bg-gray-900 text-gray-200 py-16 px-6">
 
-@code {
+    <div class="max-w-5xl mx-auto">
+        <!-- Título -->
+        <h2 class="text-4xl font-bold text-center text-blue-400 mb-10">
+            Sobre Mim
+        </h2>
 
-}
+        <!-- Texto narrativo completo -->
+        <div class="space-y-6 text-lg leading-relaxed">
+            <p>
+                Minha jornada com tecnologia começou cedo, aos <span class="font-semibold">10 anos</span>,
+                quando criei meu primeiro jogo de RPG em uma ferramenta parecida com o RPG Maker.
+                Ainda não era programação de verdade, mas já era a faísca da minha curiosidade em
+                <span class="text-blue-400">criar e resolver problemas de forma criativa</span>.
+            </p>
+
+            <p>
+                Anos mais tarde, no curso técnico de Informática, desenvolvi em <span class="font-semibold">Unity</span>
+                um jogo básico de uma fase — e foi aí que tive meu primeiro contato com o <span class="font-semibold">C#</span>.
+                Desde então, a lógica de programação se tornou parte natural da minha vida:
+                ajudei colegas na faculdade, atuei como <span class="font-semibold">monitor de programação</span>
+                e participei de <span class="font-semibold">maratonas de programação</span>.
+            </p>
+
+            <p>
+                Em <span class="font-semibold">2018</span>, decidi investir de vez na minha carreira.
+                Sem pensar em salário, abracei a primeira oportunidade que apareceu:
+                meu estágio na <span class="font-semibold">Super Estágios</span>, onde comecei a entender de processos reais de trabalho, versionamento de código, e responsabilidades profissionais básicas.
+            </p>
+
+            <p>
+                A partir daí, fui crescendo: assumi papéis mais técnicos, desenvolvendo automações em C# e .NET, construindo APIs, integrando sistemas, resolvendo incidentes e trabalhando com times multidisciplinares.
+                Mergulhei em ferramentas como Git, Azure DevOps, Selenium e bancos de dados relacionais e NoSQL, otimizando fluxos e reduzindo retrabalho nas automações que entreguei.
+            </p>
+
+            <p>
+                Hoje, como Programador RPA / Full Stack, meu foco é entregar soluções sólidas e escaláveis, com boas práticas de código, testes, manutenção e desempenho.
+                Acredito que a programação não é só técnica: é arte, lógica e empatia — criar para melhorar processos, facilitar vidas, e construir algo duradouro.
+            </p>
+        </div>
+
+        <!-- Linha do tempo ampliada -->
+        <div class="mt-16 relative max-w-3xl mx-auto">
+            <!-- Linha central -->
+            <div class="absolute w-1 bg-gray-700 h-full left-1/2 transform -translate-x-1/2"></div>
+
+            <!-- Infância -->
+            <div class="mb-12 flex justify-between items-center w-full">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-blue-500 w-10 h-10 rounded-full shadow-lg">
+                    <span class="mx-auto font-bold">🎮</span>
+                </div>
+                <div class="order-1 bg-gray-800 rounded-lg shadow-md w-5/12 px-6 py-4">
+                    <h3 class="font-bold">10 anos</h3>
+                    <p class="text-sm text-gray-400">Jogo RPG em ferramenta similar ao RPG Maker (criação e criatividade, primeiro contato com lógica).</p>
+                </div>
+            </div>
+
+            <!-- Curso Técnico -->
+            <div class="mb-12 flex justify-between items-center w-full flex-row-reverse">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-green-500 w-10 h-10 rounded-full shadow-lg">
+                    <span class="mx-auto font-bold">🕹️</span>
+                </div>
+                <div class="order-1 bg-gray-800 rounded-lg shadow-md w-5/12 px-6 py-4">
+                    <h3 class="font-bold">Técnico de Informática</h3>
+                    <p class="text-sm text-gray-400">Projeto em Unity, primeiro uso de C#, desenvolvimento de lógica e base de programação.</p>
+                </div>
+            </div>
+
+            <!-- Faculdade & Monitorias -->
+            <div class="mb-12 flex justify-between items-center w-full">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-yellow-500 w-10 h-10 rounded-full shadow-lg">
+                    <span class="mx-auto font-bold">🎓</span>
+                </div>
+                <div class="order-1 bg-gray-800 rounded-lg shadow-md w-5/12 px-6 py-4">
+                    <h3 class="font-bold">Faculdade</h3>
+                    <p class="text-sm text-gray-400">Atuação como monitor, apoio a colegas, participação em maratonas, incremento das habilidades lógicas e de programação colaborativa.</p>
+                </div>
+            </div>
+
+            <!-- Entrada Profissional -->
+            <div class="mb-12 flex justify-between items-center w-full flex-row-reverse">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-purple-600 w-10 h-10 rounded-full shadow-lg">
+                    <span class="mx-auto font-bold">💼</span>
+                </div>
+                <div class="order-1 bg-gray-800 rounded-lg shadow-md w-5/12 px-6 py-4">
+                    <h3 class="font-bold">Início Profissional (2018)</h3>
+                    <p class="text-sm text-gray-400">Estágio na Super Estágios — primeiros passos em código profissional, versionamento, responsabilidades em automações.</p>
+                </div>
+            </div>
+
+            <!-- Crescimento Técnico & Projetos -->
+            <div class="mb-12 flex justify-between items-center w-full">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-blue-600 w-10 h-10 rounded-full shadow-lg">
+                    <span class="mx-auto font-bold">🔧</span>
+                </div>
+                <div class="order-1 bg-gray-800 rounded-lg shadow-md w-5/12 px-6 py-4">
+                    <h3 class="font-bold">Desenvolvimento & Automação</h3>
+                    <p class="text-sm text-gray-400">Implementação de automações RPA, uso de Selenium, desenvolvimento de APIs, integração de sistemas, participação em code reviews e adoção de práticas de qualidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frase final -->
+        <div class="mt-16 text-center">
+            <p class="text-xl italic text-gray-300">
+                “Programar é imaginar, criar e transformar problemas em soluções que fazem a diferença.”
+            </p>
+        </div>
+    </div>
+</div>

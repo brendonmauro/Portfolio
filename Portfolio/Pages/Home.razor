@@ -1,7 +1,59 @@
-﻿@page "/Home"
+﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<div class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white flex flex-col items-center justify-center px-6">
 
-<h1>Hello, world!</h1>
+    <!-- Foto / Avatar -->
+    <img src="images/foto_perfil.jpg" alt="Foto de Brendon Mauro"
+         class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-lg mb-6">
 
-Welcome to your new app.
+    <!-- Nome e Cargo -->
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-2 text-center">
+        Brendon Mauro
+    </h1>
+    <h2 class="text-xl md:text-2xl font-medium text-gray-300 text-center">
+        RPA Developer | Full Stack | .NET Specialist
+    </h2>
+
+    <!-- Tagline -->
+    <p class="mt-4 text-gray-400 max-w-2xl text-center">
+        Transformo ideias em soluções digitais. Especialista em .NET, C#, PostgreSQL e automações RPA,
+        criando integrações inteligentes que otimizam processos e geram valor real para empresas.
+    </p>
+
+    <!-- Botões principais -->
+    <div class="mt-6 flex gap-4">
+        <a href="mailto:brendonmauro@hotmail.com"
+           class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition">
+            📧 Contato
+        </a>
+        <a href="https://www.linkedin.com/in/brendon-mauro-811540a3" target="_blank"
+           class="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg shadow-md transition">
+            🔗 LinkedIn
+        </a>
+        <a href="#sobre"
+           class="px-6 py-3 bg-transparent border border-gray-500 hover:border-blue-400 rounded-lg shadow-md transition">
+            ↓ Saiba mais
+        </a>
+    </div>
+
+    <!-- Skills em destaque -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="flex flex-col items-center">
+            <span class="text-4xl">⚙️</span>
+            <p class="mt-2 font-semibold">.NET / C#</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-4xl">🗄️</span>
+            <p class="mt-2 font-semibold">SQL / PostgreSQL</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-4xl">🤖</span>
+            <p class="mt-2 font-semibold">RPA / Selenium</p>
+        </div>
+        <div class="flex flex-col items-center">
+            <span class="text-4xl">💻</span>
+            <p class="mt-2 font-semibold">JS / React Native</p>
+        </div>
+    </div>
+
+</div>

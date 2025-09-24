@@ -1,10 +1,103 @@
 ﻿@page "/contato"
+@using System.ComponentModel.DataAnnotations
+@* @using Lucide.Blazor *@
 
-<h1 class="text-2xl font-bold mb-4">Contato</h1>
-<p>Email: <a href="mailto:brendonmauro@hotmail.com" class="text-blue-600">brendonmauro@hotmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/brendon-mauro-811540a3" class="text-blue-600">linkedin.com/in/brendon-mauro</a></p>
-<p>GitHub: <a href="https://github.com/" class="text-blue-600">github.com</a></p>
+<div class="min-h-screen bg-gray-950 py-16 px-6">
+<div class="max-w-5xl mx-auto p-6 bg-gray-950 text-white">
+    <h1 class="text-3xl font-bold mb-6 text-center">Contato</h1>
+    <p class="mb-8 text-gray-300 text-center">
+        Fique à vontade para me enviar uma mensagem ou me encontrar nas redes abaixo.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        <!-- Formulário de Contato -->
+        <EditForm Model="@contatoModel" OnValidSubmit="EnviarMensagem" class="p-6 rounded-xl border border-gray-700">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-red-500 mb-4" />
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">Nome</label>
+                <InputText class="w-full border rounded p-2 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500" @bind-Value="contatoModel.Nome" />
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">E-mail</label>
+                <InputText type="email" class="w-full border rounded p-2 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500" @bind-Value="contatoModel.Email" />
+            </div>
+
+            <div class="mb-4">
+                <label class="block font-medium mb-1">Mensagem</label>
+                <InputTextArea class="w-full border rounded p-2 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500" rows="6" @bind-Value="contatoModel.Mensagem" />
+            </div>
+
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">
+                Enviar
+            </button>
+
+            @if (mensagemEnviada)
+            {
+                <p class="mt-4 text-green-400 font-semibold animate-fadeIn">
+                    ✅ Mensagem enviada com sucesso!
+                </p>
+            }
+        </EditForm>
+
+        <!-- Cards de Contato -->
+        @* <div class="space-y-6">
+            <div class="flex items-center bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
+                <LucideEmail class="text-blue-500 w-8 h-8 mr-4" />
+                <div>
+                    <p class="font-semibold">Email</p>
+                    <a href="mailto:seuemail@exemplo.com" class="text-blue-500 hover:underline">seuemail@exemplo.com</a>
+                </div>
+            </div>
+
+            <div class="flex items-center bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
+                <LucideLinkedin class="text-blue-500 w-8 h-8 mr-4" />
+                <div>
+                    <p class="font-semibold">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/seuperfil" target="_blank" class="text-blue-500 hover:underline">linkedin.com/in/seuperfil</a>
+                </div>
+            </div>
+
+            <div class="flex items-center bg-gray-900 p-4 rounded-xl border border-gray-700 hover:border-blue-500 transition-colors">
+                <LucideGithub class="text-blue-500 w-8 h-8 mr-4" />
+                <div>
+                    <p class="font-semibold">GitHub</p>
+                    <a href="https://github.com/seuperfil" target="_blank" class="text-blue-500 hover:underline">github.com/seuperfil</a>
+                </div>
+            </div>
+        </div> *@
+    </div>
+</div>
+</div>
+
+<link href="css/contato.css" rel="stylesheet" />
+
 
 @code {
+    private ContatoModel contatoModel = new();
+    private bool mensagemEnviada = false;
 
+    private void EnviarMensagem()
+    {
+        // Implementar envio real de email aqui (SMTP, API, etc.)
+        Console.WriteLine($"Mensagem de {contatoModel.Nome} ({contatoModel.Email}): {contatoModel.Mensagem}");
+
+        mensagemEnviada = true;
+        contatoModel = new ContatoModel();
+    }
+
+    public class ContatoModel
+    {
+        [Required(ErrorMessage = "O nome é obrigatório")]
+        public string Nome { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "O e-mail é obrigatório")]
+        [EmailAddress(ErrorMessage = "E-mail inválido")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "A mensagem é obrigatória")]
+        public string Mensagem { get; set; } = string.Empty;
+    }
 }
